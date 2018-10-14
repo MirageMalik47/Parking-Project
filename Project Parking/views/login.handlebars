@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: crimson;
+            background-size: cover;
+        }
+        #profile-img {
+            height:180px;
+        }
+        label{
+            color: whitesmoke;
+        }
+        h2{
+            color:whitesmoke ;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="container ">
+        <div class="row align-items-center">
+            <div class="col-lg-4 col-md-6 col-sm-8 col-xs- mx-auto">
+                <div class="text-center">
+                    <img id="profile-img" class="rounded-circle profile-img-card" src="https://www.designfreelogoonline.com/wp-content/uploads/2015/08/000595-eagle-logo-design-free-logos-04.png" />
+                    <h2 style="color: black">Login</h2> <br>
+                    {{#if success_msg}}
+                   <div class="alert alert-success" role="alert">You have successfully signed up</div>
+                    {{/if}}
+                    {{#if error}}
+                    <div class="alert alert-danger" role="alert">Invalid username or password</div>
+                    {{/if}}
+                    <br><br>
+                     <form  class="form-signin" method="POST" action="/login">  
+                        <input type="Email" name="username" id="iEmail" class="form-control form-group" placeholder="Email" required autofocus>
+                        <input type="password" name="password" id="inputPassword" class="form-control form-group" placeholder="password" required autofocus>
+                        <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Enter</button>
+                    </form>
+                </div>
+                <br> <br> <br> <br>
+                <label > Create an account?   </label>   
+                <br>     
+                <a class="btn btn-primary" href="/signup" role="button"> Sign Up <i class="fa fa-user-plus"></i> </a>
+                <a class="btn btn-primary " href="/"  role="button">Home <i class="fa fa-home" aria-hidden="true"></i> </a> 
+            </div> 
+        </div> 
+    </div>
+</body>
+</html>

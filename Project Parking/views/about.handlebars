@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>About</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+        crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+        crossorigin="anonymous">
+        <style>
+            #core{
+            color:whitesmoke
+        }
+        #core:hover{
+            color:yellow;
+        }
+        </style>
+</head>
+
+<body>
+    <!--Nav_BAR-->
+    <nav class="sticky-top navbar navbar-expand-sm navbar navbar-dark" style="background-color: rgb(66,139,202)">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">
+                            <img src="images/Logo.png" width="30" height="30">
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="/">
+                            <i class="fa fa-home text-white"></i> Home </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="/about">
+                            <i class="fa fa-gitlab text-white"></i> About </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact">
+                            <i class="fa fa-phone text-white">&nbsp</i>Contact Us
+                        </a>
+                    </li>
+                </ul>
+
+        {{#if user}}
+         <ul class="navbar-nav navbar-right">
+          </li>
+           <li class="nav-item">
+            <a class="nav-link" href="booking">My Bookings
+            </a>
+          </li>
+           <li class="nav-item">
+            <a class="nav-link" href="/logout">Logout
+              <i class="fa fa-user-plus text-white"></i>
+            </a>
+          </li>
+        </ul>
+        {{else}}
+        <ul class="navbar-nav navbar-right">
+          <li class="nav-item">
+            <a class="nav-link" href="/login"> Login
+              <i class="fa fa-user text-white"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/signup"> Sign Up
+              <i class="fa fa-user-plus text-white"></i>
+            </a>
+          </li>
+        </ul>
+        {{/if}}
+            </div>
+        </div>
+
+    </nav>
+
+    <br>
+    <br>
+
+    <div class="container-fluid text-center" style="font-size: 50px">
+        <strong>Our Mission</strong>
+        <br>
+    </div>
+    <div class="container-fluid text-center" style="font-size: 25px">
+        <i>To power smart mobility for every driver and vehicle, everywhere</i>
+    </div>
+
+    <br>
+    <br>
+    <div class=" container-fluid">
+        <div class="row">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-4">
+                <img src="images/ab2.jpg" class="img-fluid rounded-circle profile-img-card" alt="Responsive image">
+            </div>
+            <div class="col-sm-5">
+                <p> Priority Parking is more than just a space to park your car. We focus on hospitality, making it easy, comfortable
+                    and affordable to get a superior parking experience. Founded in 2018, The Priority Parking is the leading
+                    parking company in the New Delhi with 3 locations.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <div class="container-fluid text-white" style="background-color: rgb(66,139,202); margin-top:50px;margin-bottom:50px">
+        <br><br>
+        <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-5">
+                <p> Priority Parking is on a mission to empower people to get everywhere,easier! By designing better ways to
+                    find, reserveand pay for parking, we make life easier, our cities more accessible, and our world more
+                    connected.
+                </p>
+            </div>
+            <div class="col-sm-1"></div>
+            <div class="col-sm-4">
+                <img src="images/ab4.jpg" class="img-fluid rounded-circle profile-img-card " alt="Responsive image">
+            </div>
+        </div>
+        <br><br>
+    </div>
+    <div class="container-fluid">
+        <br>
+        <div class="row">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-4">
+                <img src="images/ab3.jpg" class="img-fluid rounded-circle profile-img-card" alt="Responsive image">
+            </div>
+            <div class="col-sm-5">
+                <p>
+                    Priority Parking is the leading provider of parking solutions in the Delhi, helping thousands of people easily find and pay
+                    for parking on their mobile device. People can use Priority Parking website to quickly pay for parking
+                    without having to use a meter and reservations allow people to drive into the city without having to
+                    worry about finding parking.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <div class="container-fluid text-center" style="font-size: 25px ; background-color: rgb(66,139,202)">
+        <a id="core" :hover>
+            <strong>
+                <i class="fa fa-star" fa-3x></i> Our Core Values </strong>
+        </a>
+        <br>
+    </div>
+    <div class=" container-fluid text-white" style="background-color: rgb(66,139,202)">
+        <br>
+        <div class="row">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-3">
+                <strong> Give Customer the Right of Way</strong>
+                <br>
+                <p>We take the Hero in our name seriously, and we always make sure our customer have a good experience we're
+                    proud of.</p>
+            </div>
+
+            <div class="col-sm-1"></div>
+            <div class="col-sm-3">
+                <strong> Customer Growth</strong>
+                <br>
+                <p>We venture outside our comfort zones to accelerate company and individual growth. With a desire to learn
+                    and willingness to teach, reflection on the losses as well as the wins, and sharing and seeking of candid
+                    feedback.
+                </p>
+            </div>
+
+            <div class="col-sm-1"></div>
+            <div class="col-sm-3">
+                <strong> Fuel Relationships</strong>
+                <br>
+                <p>We believe strong relationships are the core of high-functioning teams. We build these relationships by intentionally
+                    getting to know one another,taking accountability for our work, showing vulnerability, and remembering
+                    that trust is a two-way street.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class=" container-fluid text-white" style="background-color: rgb(66,139,202)">
+        <br>
+        <div class="row">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-3">
+                <strong>Remember to Signal</strong>
+                <br>
+                <p>We all strive to do our part in communicating openly and honestly with each other in moments big and small.
+                    This means keeping your Vehicle with care.</p>
+            </div>
+
+            <div class="col-sm-1"></div>
+            <div class="col-sm-3">
+                <strong> Respect Fellow Teammates </strong>
+                <br>
+                <p>We believe in respecting our fellow teammates and creating a safe space for people to get from here to there.
+                    This means listening, assuming positive intent, and seeking to understand different perspectives.</p>
+            </div>
+
+            <div class="col-sm-1"></div>
+            <div class="col-sm-3">
+                <strong> Enjoy the Parking </strong>
+                <br>
+                <p>Laugh, feel the wind in your hair, and remember not to take yourself too seriously. </p>
+            </div>
+        </div>
+    </div>
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <!--Founding_Member-->
+    <div class="container-fluid row">
+        <div class="col-md-4 text-center">
+
+            <a href="#demo" data-toggle="collapse">
+                <img src="images/nik.JPG" class="img-fluid rounded-circle profile-img-card" alt="Nikhil Responive image">
+            </a>
+            <p class="text-center">
+                <strong>Nikhil Kumar</strong>
+            </p>
+            <br>
+            <div id="demo" class="collapse text-center">
+                <i>
+                    <p class="text-center">Bachelor of Engineering (ICE)</p>
+                    <p>Batch: 2015-2019</p>
+                    <p>Founder</p>
+                </i>
+            </div>
+        </div>
+        <div class="col-md-4 text-center">
+
+            <a href="#demo2" data-toggle="collapse">
+                <img src="images/malik.jpg" class="img-fluid rounded-circle profile-img-card" alt="Malik Responsive image">
+            </a>
+            <p class="text-center">
+                <strong>Shubham Malik</strong>
+            </p>
+            <br>
+            <div id="demo2" class="collapse">
+
+                <i>
+                    <p>Bachelor of Engineering(ICE)</p>
+                    <p>Batch: 2015-2019</p>
+                    <p>Founder</p>
+                </i>
+            </div>
+        </div>
+        <div class="col-md-4 text-center">
+
+            <a href="#demo3" data-toggle="collapse">
+                <img src="images/Rinku.jpg" class="img-fluid rounded-circle profile-img-card" alt="Rinku Responsive image">
+            </a>
+            <p class="text-center">
+                <strong>Mr.Rinku</strong>
+            </p>
+            <br>
+            <div id="demo3" class="collapse">
+                <i>
+                    <p>Bachelor of Engineering (ICE)</p>
+                    <p>Batch: 2015-2019</p>
+                    <p>Founding Member</p>
+                </i>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <!--Footer-->
+    <div class="container-fluid font-small pt-4 text-white" style="background-color: rgb(66,139,202)">
+
+        <div class="container-fluid text-center text-md-left">
+
+            <div class="row">
+
+                <div class="col-md-9 mt-md-0 mt-3">
+
+                    <img src="images/Logo.png" width="150" height="150">
+                    <h5 class="text-uppercase">Priority Parking</h5>
+                    <p>Priority Parking focuses on delivering state-of-the-art Parking System throughout Delhi.</p>
+                    <p>Priority Parking Systems are built upon patented technologies and a commitment to meeting customer needs.
+                    </p>
+                    <p> The goal is to exceed expectations in the critical areas of reliability, performance, user satisfaction
+                        and economics.</p>
+
+                </div>
+                <hr class="clearfix w-100 d-md-none pb-3">
+
+                <div class="col-md-3 mt-md-0 mt-3">
+
+                    <h5 class="text-uppercase">Links</h5>
+
+                    <ul class="list-group">
+                        <li>
+                            <a class="text-white" href="/">Home</a>
+                        </li>
+                        <li>
+                            <a class="text-white" href="/about">About</a>
+                        </li>
+                        <li>
+                            <a class="text-white" href="/contact">Contact Us</a>
+                        </li>
+                        <li>
+                            <a class="text-white" href="#!">Career</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-12 py-5">
+                <div class="mb-5 text-center">
+
+                    <a class="fb-ic">
+                        <i class="fa fa-facebook fa-lg text-white mr-md-5 mr-3 fa-2x"> </i>
+                    </a>
+                    <a class="tw-ic">
+                        <i class="fa fa-twitter fa-lg text-white mr-md-5 mr-3 fa-2x"> </i>
+                    </a>
+                    <a class="gplus-ic">
+                        <i class="fa fa-google-plus fa-lg text-white mr-md-5 mr-3 fa-2x"> </i>
+                    </a>
+                    <a class="li-ic">
+                        <i class="fa fa-linkedin fa-lg text-white mr-md-5 mr-3 fa-2x"> </i>
+                    </a>
+                    <a class="ins-ic">
+                        <i class="fa fa-instagram fa-lg text-white mr-md-5 mr-3 fa-2x"> </i>
+                    </a>
+                    <a class="pin-ic">
+                        <i class="fa fa-pinterest fa-lg text-white fa-2x"> </i>
+                    </a>
+                </div>
+                <div class="footer-copyright text-center py-3 text-white">© 2018 Copyright:
+                    <a> PriorityParking.com</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

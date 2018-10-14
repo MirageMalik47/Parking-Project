@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign Up</title>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+        crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+    <script src="signup.js"></script>
+    <script src="jQuery.js"></script>
+    <style>
+        body{
+            background-color: crimson;
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+        }
+        #profile-img {
+            height:150px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="sticky-top navbar navbar-expand-sm navbar navbar-dark" style="background-color: rgb(66,139,202)">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+    
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="/">
+                  <img src="images/Logo.png" width="30" height="30">
+                </a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="/">
+                  <i class="fa fa-home text-white"></i> Home </a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="/about">
+                  <i class="fa fa-gitlab text-white"></i> About </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/contact">
+                  <i class="fa fa-phone text-white">&nbsp</i>Contact Us
+                </a>
+              </li>
+            </ul>
+    
+            <ul class="navbar-nav navbar-right">
+              <li class="nav-item">
+                <a class="nav-link" href="/login"> Login
+                  <i class="fa fa-user text-white"></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/signup"> Sign Up
+                  <i class="fa fa-user-plus text-white"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    
+      </nav>
+    <div class="container ">
+        <div class="row align-items-center" >
+            <div class="col-lg-4 col-md-6 col-sm-8 col-xs- mx-auto">
+                <div class="container text-center" style="color:whitesmoke">
+                    <img id="profile-img" class="rounded-circle profile-img-card" src="images/Logo.png">
+                    <h2>Registration Form</h2>
+                    <br>
+                    {{#if errors}}
+                        {{#each errors}}
+                            <div class="alert alert-danger" role="alert">{{msg}}</div>
+                        {{/each}}
+                    {{/if}}
+                     {{#if error_msg}}
+                     <div class="alert alert-danger" role="alert">{{error_msg}}</div>
+                    {{/if}}
+                    <form class="form-signup text-left " method="POST" action="signup">
+                            <label for="iname">Name</label>
+                            <input type="text" name="name" id="iname" class="form-control form-group" placeholder="Full Name" required data-ok="false" autofocus>
+                        <label for="iemail">Email</label>
+                        <input  name="Email" id="iemail" class="form-control form-group" placeholder="name@example.com" required autofocus>
+                        <label for="iPassword">Password</label>
+                        <input type="password" name="password1" id="iPassword" class="form-control form-group" placeholder="password" required autofocus>
+                        <label for="iPassword2">Repeat Password</label>
+                        <input type="password" name="password2" id="iPassword2" class="form-control form-group" placeholder="Confirm password" required autofocus>
+                        <label for="iMobile">Phone No.</label>
+                        <input type="text" name="Mobile" id="iMobile" class="form-control form-group" placeholder="Mobile" required autofocus>
+                        <label>
+                    <input type="checkbox" name="check" id="#checkbox"> I agree with the
+                    <a href="#"></a>Terms and Conditions </label>
+                <button id="adduser" class="btn btn-lg btn-success btn-block btn-signin" type="submit" aria-describedby="inameErr iemailErr iPasswordErr iMobileErr igenErr">Sign Up</button>
+                    </form>
+                    <br>
+                </div>
+                
+                <br>
+                <br>
+                <label style="color:whitesmoke"> Already Member?
+                    <a style="color:rgb(204, 247, 12)" href="/login" </a> Login </a>
+                </label>
+
+
+            </div>
+        </div>
+    </div>
+    <!--Footer-->
+    <div class="container-fluid font-small pt-4 text-white" style="background-color: rgb(66,139,202)">
+
+            <div class="container-fluid text-center text-md-left">
+    
+                <div class="row">
+    
+                    <div class="col-md-9 mt-md-0 mt-3">
+    
+                        <img src="images/Logo.png" width="150" height="150">
+                        <h5 class="text-uppercase">Priority Parking</h5>
+                        <p>Priority Parking focuses on delivering state-of-the-art Parking System throughout Delhi.</p>
+                        <p>Priority Parking Systems are built upon patented technologies and a commitment to meeting customer needs.</p>
+                        <p> The goal is to exceed expectations in the critical areas of reliability, performance, user satisfaction
+                            and economics.</p>
+    
+                    </div>
+                    <hr class="clearfix w-100 d-md-none pb-3">
+    
+                    <div class="col-md-3 mt-md-0 mt-3">
+    
+                        <h5 class="text-uppercase">Links</h5>
+    
+                        <ul class="list-group">
+                            <li>
+                                <a class="text-white" href="/">Home</a>
+                            </li>
+                            <li>
+                                <a class="text-white" href="/about">About</a>
+                            </li>
+                            <li>
+                                <a class="text-white" href="/contact">Contact Us</a>
+                            </li>
+                            <li>
+                                <a class="text-white" href="#!">Career</a>
+                            </li>
+                        </ul>
+    
+                    </div>
+                </div>
+    
+            </div>
+            <div class="row">
+                <div class="col-md-12 py-5">
+                    <div class="mb-5 text-center">
+    
+                        <a class="fb-ic">
+                            <i class="fa fa-facebook fa-lg text-white mr-md-5 mr-3 fa-2x"> </i>
+                        </a>
+                        <a class="tw-ic">
+                            <i class="fa fa-twitter fa-lg text-white mr-md-5 mr-3 fa-2x"> </i>
+                        </a>
+                        <a class="gplus-ic">
+                            <i class="fa fa-google-plus fa-lg text-white mr-md-5 mr-3 fa-2x"> </i>
+                        </a>
+                        <a class="li-ic">
+                            <i class="fa fa-linkedin fa-lg text-white mr-md-5 mr-3 fa-2x"> </i>
+                        </a>
+                        <a class="ins-ic">
+                            <i class="fa fa-instagram fa-lg text-white mr-md-5 mr-3 fa-2x"> </i>
+                        </a>
+                        <a class="pin-ic">
+                            <i class="fa fa-pinterest fa-lg text-white fa-2x"> </i>
+                        </a>
+                    </div>
+                    <div class="footer-copyright text-center py-3 text-white">© 2018 Copyright:
+                        <a> PriorityParking.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>
